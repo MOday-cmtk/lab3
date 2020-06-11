@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<h1> Oli's web CornerStore</h1>
+<head>
+	<! This style sheet is taken from  https://www.w3schools.com/howto/howto_js_tabs.asp>
+	<link href="styles/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body style="background-color:ivory;">
+
+<!-- Tab links, each one with an onclick event associated with it -->
+<div class="tab">
+  <button class="tablinks" onclick="openInfo(event, 'Client')">Client</button>
+  <button class="tablinks" onclick="openInfo(event, 'Products')">Products</button>
+  <button class="tablinks" onclick="openInfo(event, 'Cart')">Cart</button>
+</div>
+
+<!-- Tab content -->
+<div id="Client" class="tabcontent">
+  <h3>Client Information</h3>
+  <p>Search filters</p>
+	Choose food products categories:
+<select id="dietSelect" name="dietSelect" onchange="populateListProductChoices(this.id, 'displayProduct')">
+<option value=""></option>
+    <option value="Vegetarian products">Vegetarian products</option>
+    <option value="GlutenFree products">GlutenFree products</option>
+    <option value="No dietary restrictions">No dietary restrictions</option>
+    <option value="Vegan products">Vegan products</option>
+    <option value="Organic products">Organic products</option>
+    <option value="Meats">Meats</option>
+
+	</select>
+</div>
+
+
+
+<div id="Products" class="tabcontent">
+  <h3>Your targeted products</h3>
+  <p>We preselected products based on chosen preferences.</p>
+	 Choose items to add to cart:
+	 <div id="displayProduct"></div>
+	 <button id="addCart" type="button" class="block" onclick="selectedItems()">
+		Add selected items to cart.
+	</button>
+</div>
+
+
+
+<div id="Cart" class="tabcontent">
+  <h3>Shopping Cart</h3>
+  <p>Your cart has the following so far.</p>
+  <div id="displayCart"></div>
+</div>
+
+<script src="scripts/groceries.js"></script>
+<script src="scripts/main.js"></script>
+
+
+		<div class=".footer">
+      			<p>Author: Mustafa Al-Saeed</p>
+      			<p>8649313</p>
+		<p><a href="mailto:malsa023@uottawa.ca">malsa023@uottawa.ca</a></p>
+		</div>	
+
+</body>
+</html>
