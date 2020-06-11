@@ -62,7 +62,7 @@ function populateListProductChoices(slct1, slct2) {
 		s2.appendChild(document.createElement("br"));   
 		
 		var img = document.createElement("img")
-		img.src = "D:/github.com/MOday-cmtk/lab3/images" + productName + ".jpg"
+		img.src = "https://github.com/MOday-cmtk/lab3/tree/master/images" + productName + ".jpg"
 		s2.appendChild(img);
 
 		// create a breakline node and add in HTML DOM
